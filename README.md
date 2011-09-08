@@ -22,7 +22,7 @@ If you have any questions, please feel free to ask on my [blog](http://kevin.h-p
 --------
 cachedImageView Usage:
 
-        Ti.include('lib/cachedImageView.js');
+	Ti.include('lib/cachedImageView.js');
 	function createMyImage() {
 		var win = Ti.UI.currentWindow;
 	
