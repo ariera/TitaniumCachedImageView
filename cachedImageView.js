@@ -9,9 +9,9 @@
    and the Image View Object its being assigned to. */
 cachedImageView = function(imageDirectoryName, url, imageViewObject)
 {
-	// Grab the filename
-	var filename = url.split('/');
-	filename = filename[filename.length - 1];
+	// Use the hashed url as filename to avoid possible collissions
+	var filename = Ti.Utils.md5HexDigest(url);
+	
 	// Try and get the file that has been previously cached
 	var file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, imageDirectoryName, filename);
 	
